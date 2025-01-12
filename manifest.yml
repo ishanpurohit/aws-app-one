@@ -1,7 +1,7 @@
 ---
 prd:
   account:
-    account_id: '1234567899'
+    account_id: '1234567898'
     name: prd-account
     region: us-east-1
   uai: uai123
