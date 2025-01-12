@@ -1,9 +1,8 @@
 ---
-dev: #Github Branch name (app env name)
+dev:
   account:
-    name: <Name of Account Repo AWS>
-    account_id: <Account ID AWS >
-    region: < In which aws region to deploy the app >
+    name: prd-account
+    account_id: '1234567899'
+    region: us-east-1
   pattern-release: <Get Latest Release from the AWS-Pattern Repo>
-
-uai: < Your App uai >
+uai: uai123457
