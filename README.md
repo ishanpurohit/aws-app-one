@@ -14,6 +14,17 @@ VERSION-3 7-aUG-26
 
 ---
 
+| Capability | Amazon Neptune Database | Amazon Neptune Analytics |
+|------------|-------------------------|--------------------------|
+| Primary Purpose | Operational graph database | Managed graph analytics engine |
+| Graph Data Storage | ✔ Supported | ✔ Managed analytical graph |
+| Transactional Read/Write Operations | ✔ Supported | ✘ Not intended for transactional updates |
+| Operational Application Backend | ✔ Supported | ✘ Not intended for operational application workloads |
+| Graph Query Execution | ✔ Supported | ✔ Supported |
+| Large-scale Graph Analytics | Limited | ✔ Optimized |
+| Built-in Graph Analytics Algorithms | Limited | ✔ Fully Supported |
+| Recommended Workload | Operational graph applications | Read-heavy analytical graph workloads |
+
 ## Problem Statement
 
 Organizations require a scalable, secure, and managed graph platform for storing, querying, and analyzing highly connected datasets.
