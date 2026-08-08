@@ -35,7 +35,6 @@ The architecture includes:
 
 - **Application / Compute Layer**
   - Represents the workload interacting with Amazon Neptune Database.
-  - The solution is compute-service agnostic and does not mandate a specific AWS compute platform.
 
 - **Amazon Neptune Database**
   - Acts as the operational graph datastore.
@@ -52,10 +51,14 @@ The architecture includes:
 - **Amazon VPC and Security Groups**
   - Provide network isolation and controlled connectivity to Amazon Neptune Database.
 
+- **Neptune Analytics Private Graph Endpoint (Optional)**
+  - Provides private connectivity between applications running inside an Amazon VPC and Amazon Neptune Analytics.
+  - Recommended when private network communication to Amazon Neptune Analytics is required.
+
 - **AWS Key Management Service (AWS KMS)**
   - Provides encryption at rest for supported Neptune resources.
 
-The core solution intentionally does not mandate services such as Amazon ECS, AWS Lambda, Amazon EC2, Amazon EKS, Amazon S3, AWS Step Functions, or Amazon EventBridge Scheduler. These services may be introduced as optional application, orchestration, ingestion, or downstream integration components based on implementation requirements.
+Note: The core solution intentionally does not mandate services such as Amazon ECS, AWS Lambda, Amazon EC2, Amazon EKS, Amazon S3, AWS Step Functions, or Amazon EventBridge Scheduler. These services may be introduced as optional application, orchestration, ingestion, or downstream integration components based on implementation requirements.
 
 ---
 
