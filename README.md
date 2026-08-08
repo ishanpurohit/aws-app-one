@@ -94,24 +94,13 @@ The solution supports both operational graph workloads and analytical graph proc
 
 ---
 
-## Architecture Diagram 
+## Architecture Diagram and Characteristics
 
 This solution is centered on Amazon Neptune Database and Amazon Neptune Analytics as the primary graph services. The architecture includes:
 
-- **Application / Compute Layer** - Represents the workload interacting with Amazon Neptune Database.
-- **Amazon Neptune Database** - Acts as the operational graph datastore and Supports transactional graph reads, writes, updates, and application queries.
-- **Amazon Neptune Analytics** - Provides a managed graph analytics engine, Imports graph data from Amazon Neptune Database for analytical processing, Enables graph analytics workloads to operate independently from the operational database.
-- **AWS Identity and Access Management (IAM)** - Provides authentication and least-privilege authorization between applications and Neptune services.
-- **Amazon VPC and Security Groups** - Provide network isolation and controlled connectivity to Amazon Neptune Database.
-- **Neptune Analytics Private Graph Endpoint (Optional)** - Provides private connectivity between applications running inside an Amazon VPC and Amazon Neptune Analytics and also recommended when private network communication to Amazon Neptune Analytics is required.
-- **AWS Key Management Service (AWS KMS)** - Provides encryption at rest for supported Neptune resources.
-
-Note: The core solution intentionally does not mandate services such as Amazon ECS, AWS Lambda, Amazon EC2, Amazon EKS, Amazon S3, AWS Step Functions, or Amazon EventBridge Scheduler. These services may be introduced as optional application, orchestration, ingestion, or downstream integration components based on implementation requirements.
-
-## Architecture Characteristics
-
 The solution provides the following architectural characteristics:
 
+- Represents the Application / Compute Layer workload interacting with Amazon Neptune Database.
 - Separation of operational and analytical graph workloads.
 - Fully managed AWS graph services.
 - Independent scaling of operational and analytical environments.
@@ -119,6 +108,8 @@ The solution provides the following architectural characteristics:
 - Encryption at rest using AWS KMS.
 - Private networking for operational graph resources.
 - Reusable enterprise architecture independent of any specific application framework or compute platform.
+
+Note: The core solution intentionally does not mandate services such as Amazon ECS, AWS Lambda, Amazon EC2, Amazon EKS, Amazon S3, AWS Step Functions, or Amazon EventBridge Scheduler. These services may be introduced as optional application, orchestration, ingestion, or downstream integration components based on implementation requirements.
 
 ---
 
