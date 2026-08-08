@@ -132,9 +132,7 @@ Amazon Neptune Analytics
 
 The workflow operates as follows:
 
-### 1. Application Processing
-
-Applications execute operational graph workloads against Amazon Neptune Database.
+1. Application Processing: Applications execute operational graph workloads against Amazon Neptune Database.
 
 Typical operations include:
 
@@ -144,13 +142,7 @@ Typical operations include:
 - Executing transactional graph queries
 - Traversing graph relationships
 
-The application layer remains independent of the Neptune architecture and may be implemented using any supported compute platform.
-
----
-
-### 2. Operational Graph Storage
-
-Amazon Neptune Database serves as the operational graph datastore.
+2. Operational Graph Storage : Amazon Neptune Database serves as the operational graph datastore.
 
 It is responsible for:
 
