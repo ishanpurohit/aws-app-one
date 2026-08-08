@@ -303,25 +303,6 @@ The application platform should be selected based on workload requirements and o
 
 ---
 
-### Optional Integrations
-
-The following AWS services may be integrated with this solution depending on implementation requirements.
-
-- Amazon S3
-- AWS Step Functions
-- Amazon EventBridge Scheduler
-- Amazon EventBridge Rules
-- Amazon CloudWatch
-- AWS CloudTrail
-- Amazon SNS
-- AWS Lambda
-- Amazon SQS
-- Amazon API Gateway
-
-These services are not mandatory components of the core Amazon Neptune solution and should only be introduced where required by the workload.
-
----
-
 ## Additional Information
 
 Additional AWS services such as Amazon ECS, AWS Lambda, Amazon EC2, Amazon EKS, Amazon S3, AWS Step Functions, and Amazon EventBridge Scheduler may be incorporated into an implementation as required. These services are considered optional integrations and are not mandatory components of the core Neptune solution pattern.These integrations extend the capabilities of the solution but are not mandatory components of the core Amazon Neptune architecture.
@@ -353,28 +334,6 @@ The following table summarizes their primary capabilities.
 | Built-in Graph Analytics Algorithms | Limited | ✔ Fully Supported |
 | Recommended Workload | Operational graph applications | Read-heavy analytical graph workloads |
 
-### Service Selection Guidance
-
-Choose **Amazon Neptune Database** when:
-
-- Applications require transactional graph read and write operations.
-- Graph data changes frequently.
-- The database serves as the operational backend for production applications.
-
-Choose **Amazon Neptune Analytics** when:
-
-- Large-scale graph analytics are required.
-- Read-heavy analytical workloads are performed.
-- Relationship exploration or graph algorithms are required.
-- Analytical processing should remain isolated from operational workloads.
-
-Use **Amazon Neptune Database together with Amazon Neptune Analytics** when:
-
-- Production graph applications require both transactional graph operations and advanced graph analytics.
-- Analytical workloads should not impact operational database performance.
-- Organizations require a clear separation between operational graph processing and graph analytics.
-
----
 
 ## Solution Validation Summary
 
@@ -386,30 +345,3 @@ Use **Amazon Neptune Database together with Amazon Neptune Analytics** when:
 | Performance Efficiency | Excellent | Operational graph processing and graph analytics are separated to independently optimize each workload. |
 | Cost Optimization | Good | Organizations can select only the AWS services required for their implementation while avoiding unnecessary infrastructure. |
 | Sustainability | Good | Managed AWS services reduce infrastructure management and optimize resource utilization. |
-
----
-
-## Conclusion
-
-This solution provides a generic, reusable, and enterprise-ready architecture pattern for Amazon Neptune Database together with Amazon Neptune Analytics.
-
-The solution intentionally focuses on the core Amazon Neptune services while remaining independent of any specific application architecture, compute platform, orchestration mechanism, or downstream integration.
-
-By separating operational graph processing from analytical graph workloads, organizations can implement scalable graph solutions while maintaining application performance, security, and operational efficiency.
-
-The architecture supports a wide range of application implementations, allowing organizations to integrate Amazon Neptune with services such as Amazon ECS, AWS Lambda, Amazon EC2, Amazon EKS, AWS Fargate, or other supported compute platforms according to workload requirements.
-
-Additional AWS services—including Amazon S3, AWS Step Functions, Amazon EventBridge Scheduler, Amazon EventBridge Rules, Amazon API Gateway, Amazon SNS, Amazon SQS, Amazon QuickSight, Amazon Bedrock, Amazon SageMaker, Amazon CloudWatch, and AWS CloudTrail—may be incorporated as optional integrations where required by specific business or technical requirements.
-
-This solution pattern serves as a reusable enterprise reference architecture for organizations implementing secure, scalable, and managed graph database and graph analytics workloads on AWS.
-
----
-
-## References
-
-- Amazon Neptune Database Documentation
-- Amazon Neptune Analytics Documentation
-- AWS Identity and Access Management (IAM) Documentation
-- Amazon Virtual Private Cloud (Amazon VPC) Documentation
-- AWS Key Management Service (AWS KMS) Documentation
-- AWS Well-Architected Framework
