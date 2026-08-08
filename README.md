@@ -52,6 +52,36 @@ This solution aligns with AWS security best practices and Well-Architected Frame
 
 ---
 
+
+## Use Cases
+
+This solution pattern is applicable to organizations that require a managed graph platform for operational graph processing together with large-scale graph analytics.
+
+Typical business use cases include:
+
+- Knowledge Graphs
+- Fraud Detection and Financial Crime Investigation
+- Customer 360 and Recommendation Engines
+- Network and Infrastructure Topology Analysis
+- Supply Chain and Dependency Mapping
+- Identity and Access Relationship Analysis
+- Social Network and Connected Data Analysis
+- IT Asset Relationship Management
+- Dependency Graph Analysis
+- Master Data Relationship Analysis
+- Product Recommendation Platforms
+- Risk Relationship Analysis
+- Data Lineage and Metadata Graphs
+- Large-scale Graph Analytics
+- Graph-based AI and Machine Learning Workloads
+
+The solution supports both operational graph workloads and analytical graph processing while allowing organizations to choose the most appropriate application architecture around the core Neptune services.
+
+---
+
+
+
+
 ## Architecture Diagram 
 - In this Design
 
@@ -106,38 +136,11 @@ This separation allows organizations to independently scale and optimize operati
 
 
 
-## Use Cases
-
-This solution pattern is applicable to organizations that require a managed graph platform for operational graph processing together with large-scale graph analytics.
-
-Typical business use cases include:
-
-- Knowledge Graphs
-- Fraud Detection and Financial Crime Investigation
-- Customer 360 and Recommendation Engines
-- Network and Infrastructure Topology Analysis
-- Supply Chain and Dependency Mapping
-- Identity and Access Relationship Analysis
-- Social Network and Connected Data Analysis
-- IT Asset Relationship Management
-- Dependency Graph Analysis
-- Master Data Relationship Analysis
-- Product Recommendation Platforms
-- Risk Relationship Analysis
-- Data Lineage and Metadata Graphs
-- Large-scale Graph Analytics
-- Graph-based AI and Machine Learning Workloads
-
-The solution supports both operational graph workloads and analytical graph processing while allowing organizations to choose the most appropriate application architecture around the core Neptune services.
-
----
 
 
 
 
-> **Note**
->
-> Additional AWS services such as Amazon ECS, AWS Lambda, Amazon EC2, Amazon EKS, Amazon S3, AWS Step Functions, and Amazon EventBridge Scheduler may be incorporated into an implementation as required. These services are considered optional integrations and are not mandatory components of the core Neptune solution pattern.
+
 
 ---
 
@@ -520,6 +523,10 @@ Administrative access should not be granted to application workloads.
 ---
 
 ## Additional Information
+
+> **Note**
+>
+> Additional AWS services such as Amazon ECS, AWS Lambda, Amazon EC2, Amazon EKS, Amazon S3, AWS Step Functions, and Amazon EventBridge Scheduler may be incorporated into an implementation as required. These services are considered optional integrations and are not mandatory components of the core Neptune solution pattern.
 
 ### Compute Layer Flexibility
 
