@@ -443,7 +443,6 @@ Depending on implementation requirements, this solution can be integrated with a
 - Amazon CloudWatch
 - AWS CloudTrail
 - AWS Lambda
-- Amazon QuickSight
 - Amazon Bedrock
 - Amazon SageMaker
 
