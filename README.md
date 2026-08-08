@@ -324,43 +324,17 @@ These services are not mandatory components of the core Amazon Neptune solution 
 
 ## Additional Information
 
-Additional AWS services such as Amazon ECS, AWS Lambda, Amazon EC2, Amazon EKS, Amazon S3, AWS Step Functions, and Amazon EventBridge Scheduler may be incorporated into an implementation as required. These services are considered optional integrations and are not mandatory components of the core Neptune solution pattern.
+Additional AWS services such as Amazon ECS, AWS Lambda, Amazon EC2, Amazon EKS, Amazon S3, AWS Step Functions, and Amazon EventBridge Scheduler may be incorporated into an implementation as required. These services are considered optional integrations and are not mandatory components of the core Neptune solution pattern.These integrations extend the capabilities of the solution but are not mandatory components of the core Amazon Neptune architecture.
 
 - **Optional AWS Integrations** - Depending on implementation requirements, this solution can be integrated with additional AWS services such as Amazon S3, AWS Step Functions, Amazon EventBridge Scheduler, Amazon EventBridge Rules, Amazon API Gateway, Amazon SNS, Amazon SQS, Amazon CloudWatch, AWS CloudTrail, AWS Lambda, Amazon Bedrock, Amazon SageMaker.
 
-These integrations extend the capabilities of the solution but are not mandatory components of the core Amazon Neptune architecture.
-
----
-
-### Service Selection Guidance
-
-Amazon Neptune Database and Amazon Neptune Analytics are complementary services designed for different workload types.
+- **Service Selection Guidance** - Amazon Neptune Database and Amazon Neptune Analytics are complementary services designed for different workload types.
 
 - Use **Amazon Neptune Database** for operational graph applications requiring transactional graph read/write operations.
 - Use **Amazon Neptune Analytics** for large-scale graph analytics, graph exploration, and analytical processing.
 - Use **both services together** when operational graph workloads must remain isolated from analytical processing while sharing the same graph data foundation.
 
 ---
-
-## Future Enhancements
-
-The solution can be extended with additional AWS capabilities as required, including:
-
-- Automated graph import and refresh workflows.
-- Event-driven orchestration.
-- Graph analytics dashboards and visualization.
-- AI-powered graph intelligence using Amazon Bedrock.
-- Machine learning pipelines using Amazon SageMaker.
-- Cross-account Neptune deployments.
-- Multi-Region graph architectures.
-- Infrastructure provisioning using AWS CloudFormation or Terraform.
-- Enterprise monitoring, alerting, and operational dashboards.
-
-These enhancements are implementation-specific and should be adopted based on workload requirements rather than being considered mandatory components of the core solution pattern.
-
----
-
-=============================================================================
 
 ## Amazon Neptune Database vs Amazon Neptune Analytics
 
