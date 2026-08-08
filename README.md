@@ -95,6 +95,7 @@ The solution supports both operational graph workloads and analytical graph proc
 ---
 
 ## Architecture Diagram 
+
 This solution is centered on Amazon Neptune Database and Amazon Neptune Analytics as the primary graph services. The architecture includes:
 
 - **Application / Compute Layer** - Represents the workload interacting with Amazon Neptune Database.
@@ -106,6 +107,18 @@ This solution is centered on Amazon Neptune Database and Amazon Neptune Analytic
 - **AWS Key Management Service (AWS KMS)** - Provides encryption at rest for supported Neptune resources.
 
 Note: The core solution intentionally does not mandate services such as Amazon ECS, AWS Lambda, Amazon EC2, Amazon EKS, Amazon S3, AWS Step Functions, or Amazon EventBridge Scheduler. These services may be introduced as optional application, orchestration, ingestion, or downstream integration components based on implementation requirements.
+
+## Architecture Characteristics
+
+The solution provides the following architectural characteristics:
+
+- Separation of operational and analytical graph workloads.
+- Fully managed AWS graph services.
+- Independent scaling of operational and analytical environments.
+- Secure authentication using IAM.
+- Encryption at rest using AWS KMS.
+- Private networking for operational graph resources.
+- Reusable enterprise architecture independent of any specific application framework or compute platform.
 
 ---
 
@@ -197,19 +210,7 @@ Throughout the solution:
 
 ---
 
-## Architecture Characteristics
 
-The solution provides the following architectural characteristics:
-
-- Separation of operational and analytical graph workloads.
-- Fully managed AWS graph services.
-- Independent scaling of operational and analytical environments.
-- Secure authentication using IAM.
-- Encryption at rest using AWS KMS.
-- Private networking for operational graph resources.
-- Reusable enterprise architecture independent of any specific application framework or compute platform.
-
----
 
 =====================================================================
 
