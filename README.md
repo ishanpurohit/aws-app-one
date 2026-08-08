@@ -1,5 +1,3 @@
-VERSION-3 7-aUG-26
-
 # DB-XX: Amazon Neptune Database with Amazon Neptune Analytics Solution Pattern
 
 ---
