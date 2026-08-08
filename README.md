@@ -109,36 +109,6 @@ Note: The core solution intentionally does not mandate services such as Amazon E
 
 ---
 
-## Core Architecture Principle
-
-The generic architecture follows the logical flow:
-
-Application / Compute Layer  
-→ Amazon Neptune Database  
-→ Amazon Neptune Analytics
-
-The application layer interacts with Amazon Neptune Database for operational graph processing, while Amazon Neptune Analytics is used for analytical graph workloads where separation from transactional processing is required.
-
-This separation allows organizations to independently scale and optimize operational and analytical graph workloads while maintaining a common graph data foundation.
-
-
-
-## Components
-
-The solution consists of the following core AWS services.
-
-| Component | Purpose |
-|-----------|---------|
-| Application / Compute Layer | Represents the application or compute platform interacting with Amazon Neptune Database. The implementation is compute-service agnostic and may use any supported runtime. |
-| Amazon Neptune Database | Fully managed graph database used for operational graph storage, transactional read/write operations, and graph queries. |
-| Amazon Neptune Analytics | Fully managed graph analytics engine that imports graph data from Amazon Neptune Database and executes analytical graph workloads independently from the operational database. |
-| AWS Identity and Access Management (IAM) | Provides authentication, authorization, and least-privilege access between applications and Neptune services. |
-| Amazon VPC | Provides network isolation for Amazon Neptune Database and application resources. |
-| Security Groups | Restrict inbound and outbound network communication between application resources and Amazon Neptune Database. |
-| AWS Key Management Service (AWS KMS) | Provides encryption at rest for supported Amazon Neptune resources. |
-
----
-
 ## Pattern Description & Flow
 
 This solution provides a generic architecture for combining Amazon Neptune Database with Amazon Neptune Analytics while maintaining a clear separation between operational graph processing and analytical graph workloads.
