@@ -79,8 +79,21 @@ The solution supports both operational graph workloads and analytical graph proc
 
 ---
 
+## Security Risks & Mitigations
+
+| Risk | Description | Mitigation |
+|------|-------------|------------|
+| Unauthorized access to graph data | Unauthorized users or applications may gain access to operational graph data. | Deploy Amazon Neptune Database within private subnets, use IAM authentication where applicable, security groups, and least-privilege IAM roles. |
+| Unauthorized access to graph analytics | Applications or users may access Amazon Neptune Analytics without appropriate authorization. | Restrict access using IAM policies, resource-level permissions, and approved application identities. |
+| Unencrypted graph data | Sensitive graph data could be exposed if encryption is not enabled. | Enable AWS KMS encryption for Amazon Neptune Database and Amazon Neptune Analytics. |
+| Data exposure during transmission | Graph queries or imported datasets could be intercepted during communication. | Enforce encrypted communication using TLS for all client and service interactions. |
+| Excessive IAM permissions | Overly permissive IAM policies increase the attack surface. | Apply least-privilege IAM policies and separate execution roles for applications and administrators. |
+| Public network exposure | Graph databases exposed to public networks increase security risk. | Deploy Neptune resources within private networking boundaries and restrict inbound access using security groups. |
+| Operational workload impacted by analytics | Running analytical workloads against the operational database may degrade application performance. | Execute large-scale graph analytics using Amazon Neptune Analytics while keeping transactional workloads on Amazon Neptune Database. |
+| Lack of monitoring and auditability | Security events and operational failures may not be detected. | Enable Amazon CloudWatch metrics, CloudWatch Logs, and AWS CloudTrail for monitoring, auditing, and operational visibility. |
 
 
+---
 
 ## Architecture Diagram 
 - In this Design
@@ -129,37 +142,6 @@ Application / Compute Layer
 The application layer interacts with Amazon Neptune Database for operational graph processing, while Amazon Neptune Analytics is used for analytical graph workloads where separation from transactional processing is required.
 
 This separation allows organizations to independently scale and optimize operational and analytical graph workloads while maintaining a common graph data foundation.
-
----
-
-
-
-
-
-
-
-
-
-
-
----
-
-## Security Risks & Mitigations
-
-| Risk | Description | Mitigation |
-|------|-------------|------------|
-| Unauthorized access to graph data | Unauthorized users or applications may gain access to operational graph data. | Deploy Amazon Neptune Database within private subnets, use IAM authentication where applicable, security groups, and least-privilege IAM roles. |
-| Unauthorized access to graph analytics | Applications or users may access Amazon Neptune Analytics without appropriate authorization. | Restrict access using IAM policies, resource-level permissions, and approved application identities. |
-| Unencrypted graph data | Sensitive graph data could be exposed if encryption is not enabled. | Enable AWS KMS encryption for Amazon Neptune Database and Amazon Neptune Analytics. |
-| Data exposure during transmission | Graph queries or imported datasets could be intercepted during communication. | Enforce encrypted communication using TLS for all client and service interactions. |
-| Excessive IAM permissions | Overly permissive IAM policies increase the attack surface. | Apply least-privilege IAM policies and separate execution roles for applications and administrators. |
-| Public network exposure | Graph databases exposed to public networks increase security risk. | Deploy Neptune resources within private networking boundaries and restrict inbound access using security groups. |
-| Operational workload impacted by analytics | Running analytical workloads against the operational database may degrade application performance. | Execute large-scale graph analytics using Amazon Neptune Analytics while keeping transactional workloads on Amazon Neptune Database. |
-| Lack of monitoring and auditability | Security events and operational failures may not be detected. | Enable Amazon CloudWatch metrics, CloudWatch Logs, and AWS CloudTrail for monitoring, auditing, and operational visibility. |
-
----
-
-==================================================================================
 
 
 
