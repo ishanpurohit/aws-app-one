@@ -92,7 +92,6 @@ The solution supports both operational graph workloads and analytical graph proc
 | Operational workload impacted by analytics | Running analytical workloads against the operational database may degrade application performance. | Execute large-scale graph analytics using Amazon Neptune Analytics while keeping transactional workloads on Amazon Neptune Database. |
 | Lack of monitoring and auditability | Security events and operational failures may not be detected. | Enable Amazon CloudWatch metrics, CloudWatch Logs, and AWS CloudTrail for monitoring, auditing, and operational visibility. |
 
-
 ---
 
 ## Architecture Diagram 
@@ -101,19 +100,10 @@ This solution is centered on Amazon Neptune Database and Amazon Neptune Analytic
 - **Application / Compute Layer** - Represents the workload interacting with Amazon Neptune Database.
 - **Amazon Neptune Database** - Acts as the operational graph datastore and Supports transactional graph reads, writes, updates, and application queries.
 - **Amazon Neptune Analytics** - Provides a managed graph analytics engine, Imports graph data from Amazon Neptune Database for analytical processing, Enables graph analytics workloads to operate independently from the operational database.
-
-- **AWS Identity and Access Management (IAM)**
-  - Provides authentication and least-privilege authorization between applications and Neptune services.
-
-- **Amazon VPC and Security Groups**
-  - Provide network isolation and controlled connectivity to Amazon Neptune Database.
-
-- **Neptune Analytics Private Graph Endpoint (Optional)**
-  - Provides private connectivity between applications running inside an Amazon VPC and Amazon Neptune Analytics.
-  - Recommended when private network communication to Amazon Neptune Analytics is required.
-
-- **AWS Key Management Service (AWS KMS)**
-  - Provides encryption at rest for supported Neptune resources.
+- **AWS Identity and Access Management (IAM)** - Provides authentication and least-privilege authorization between applications and Neptune services.
+- **Amazon VPC and Security Groups** - Provide network isolation and controlled connectivity to Amazon Neptune Database.
+- **Neptune Analytics Private Graph Endpoint (Optional)** - Provides private connectivity between applications running inside an Amazon VPC and Amazon Neptune Analytics and also recommended when private network communication to Amazon Neptune Analytics is required.
+- **AWS Key Management Service (AWS KMS)** - Provides encryption at rest for supported Neptune resources.
 
 Note: The core solution intentionally does not mandate services such as Amazon ECS, AWS Lambda, Amazon EC2, Amazon EKS, Amazon S3, AWS Step Functions, or Amazon EventBridge Scheduler. These services may be introduced as optional application, orchestration, ingestion, or downstream integration components based on implementation requirements.
 
