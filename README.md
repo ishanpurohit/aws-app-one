@@ -1,6 +1,8 @@
+---
+
 # DB-XX: Amazon Neptune Database with Amazon Neptune Analytics Solution Pattern
 
-
+---
 
 ## Change History
 
