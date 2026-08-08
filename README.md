@@ -299,45 +299,6 @@ Recommended validation activities include:
 
 ## Deployment Dependencies
 
-The following dependencies should be available before implementing this solution.
-
-### Infrastructure
-
-- Amazon VPC
-- Private Subnets
-- Security Groups
-- Route Tables
-
----
-
-### Security
-
-- AWS IAM Roles
-- AWS IAM Policies
-- AWS KMS Keys
-
----
-
-### Core Services
-
-- Amazon Neptune Database
-- Amazon Neptune Analytics
-
----
-
-### Application Layer
-
-A supported application or compute platform should be provisioned to interact with Amazon Neptune Database.
-
-Examples include:
-
-- Amazon ECS
-- Amazon EC2
-- AWS Lambda
-- Amazon EKS
-- AWS Fargate
-- Other supported application runtimes
-
 The application platform should be selected based on workload requirements and organizational standards rather than being dictated by the Neptune architecture.
 
 ---
