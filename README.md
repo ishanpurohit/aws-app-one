@@ -1,6 +1,6 @@
 VERSION-3 7-aUG-26
 
-# APP-XX: Amazon Neptune Database with Amazon Neptune Analytics Solution Pattern
+# DB-XX: Amazon Neptune Database with Amazon Neptune Analytics Solution Pattern
 
 ---
 
@@ -9,29 +9,15 @@ VERSION-3 7-aUG-26
 | Version | Date | Owner | Reviewer(s) | Comments |
 |---------|------|-------|-------------|----------|
 | 1.0 | YYYY-MM-DD | [Your Name] | [Reviewer Name] | Initial release |
-| 2.0 | YYYY-MM-DD | [Your Name] | [Reviewer Name] | Added multiple Neptune analytics deployment patterns |
-| 3.0 | YYYY-MM-DD | [Your Name] | [Reviewer Name] | Refactored as a generic Neptune-centric solution pattern |
 
 ---
 
-| Capability | Amazon Neptune Database | Amazon Neptune Analytics |
-|------------|-------------------------|--------------------------|
-| Primary Purpose | Operational graph database | Managed graph analytics engine |
-| Graph Data Storage | ✔ Supported | ✔ Managed analytical graph |
-| Transactional Read/Write Operations | ✔ Supported | ✘ Not intended for transactional updates |
-| Operational Application Backend | ✔ Supported | ✘ Not intended for operational application workloads |
-| Graph Query Execution | ✔ Supported | ✔ Supported |
-| Large-scale Graph Analytics | Limited | ✔ Optimized |
-| Built-in Graph Analytics Algorithms | Limited | ✔ Fully Supported |
-| Recommended Workload | Operational graph applications | Read-heavy analytical graph workloads |
 
 ## Problem Statement
 
 Organizations require a scalable, secure, and managed graph platform for storing, querying, and analyzing highly connected datasets.
 
 Amazon Neptune Database provides a managed graph database for operational and transactional graph workloads, while Amazon Neptune Analytics provides a managed analytics engine for performing large-scale graph analysis independently from operational database processing.
-
-A reusable enterprise pattern should remain independent of any specific application compute service, orchestration mechanism, or downstream storage platform. The solution therefore focuses on the core integration between Amazon Neptune Database and Amazon Neptune Analytics while allowing the surrounding application and integration layers to be selected according to workload requirements.
 
 This pattern provides a standardized architecture for:
 
