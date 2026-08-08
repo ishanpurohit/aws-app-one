@@ -27,6 +27,31 @@ This pattern provides a standardized architecture for:
 
 ---
 
+**Disclaimer**
+
+>
+> This solution provides a generic reusable reference architecture for Amazon Neptune Database and Amazon Neptune Analytics.
+>
+> Application-specific compute platforms, ingestion mechanisms, orchestration services, downstream integrations, compliance requirements, networking controls, encryption standards, backup strategies, disaster recovery requirements, and operational controls must be evaluated separately based on workload requirements.
+>
+> Optional AWS services may be integrated with this pattern where required, but they are not mandatory components of the core Amazon Neptune solution.
+
+---
+
+## Standard Compliance
+
+This solution aligns with AWS security best practices and Well-Architected Framework recommendations.
+
+| ID | AWS Service | Purpose | Cyber Baseline | IaC Template |
+|----|-------------|----------|----------------|--------------|
+| 1 | Amazon Neptune Database | Operational Graph Database | Neptune Database Security Baseline | Neptune Database Module |
+| 2 | Amazon Neptune Analytics | Graph Analytics Engine | Neptune Analytics Security Baseline | Neptune Analytics Module |
+| 3 | AWS Identity and Access Management (IAM) | Authentication & Authorization | IAM Security Baseline | IAM Module |
+| 5 | Security Groups | Network Access Control | Security Group Baseline | VPC Module |
+| 6 | AWS Key Management Service (AWS KMS) | Encryption at Rest | KMS Security Baseline | KMS Module |
+
+---
+
 ## Architecture Diagram 
 - In this Design
 
@@ -77,13 +102,7 @@ This separation allows organizations to independently scale and optimize operati
 
 ---
 
-> **Disclaimer**
->
-> This solution provides a generic reusable reference architecture for Amazon Neptune Database and Amazon Neptune Analytics.
->
-> Application-specific compute platforms, ingestion mechanisms, orchestration services, downstream integrations, compliance requirements, networking controls, encryption standards, backup strategies, disaster recovery requirements, and operational controls must be evaluated separately based on workload requirements.
->
-> Optional AWS services may be integrated with this pattern where required, but they are not mandatory components of the core Amazon Neptune solution.
+
 
 
 
@@ -113,20 +132,8 @@ The solution supports both operational graph workloads and analytical graph proc
 
 ---
 
-## Standard Compliance
 
-This solution aligns with AWS security best practices and Well-Architected Framework recommendations.
 
-| ID | AWS Service | Purpose | Cyber Baseline | IaC Template |
-|----|-------------|----------|----------------|--------------|
-| 1 | Amazon Neptune Database | Operational Graph Database | Neptune Database Security Baseline | Neptune Database Module |
-| 2 | Amazon Neptune Analytics | Graph Analytics Engine | Neptune Analytics Security Baseline | Neptune Analytics Module |
-| 3 | AWS Identity and Access Management (IAM) | Authentication & Authorization | IAM Security Baseline | IAM Module |
-| 4 | Amazon VPC | Network Isolation | VPC Security Baseline | VPC Module |
-| 5 | Security Groups | Network Access Control | Security Group Baseline | VPC Module |
-| 6 | AWS Key Management Service (AWS KMS) | Encryption at Rest | KMS Security Baseline | KMS Module |
-| 7 | Amazon CloudWatch | Monitoring & Logging | CloudWatch Baseline | CloudWatch Module |
-| 8 | AWS CloudTrail | Audit & Governance | CloudTrail Baseline | CloudTrail Module |
 
 > **Note**
 >
