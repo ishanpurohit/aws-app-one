@@ -27,7 +27,8 @@ This pattern provides a standardized architecture for:
 
 ---
 
-## In this Design
+## Architecture Diagram 
+- In this Design
 
 This solution is centered on Amazon Neptune Database and Amazon Neptune Analytics as the primary graph services.
 
@@ -84,7 +85,6 @@ This separation allows organizations to independently scale and optimize operati
 >
 > Optional AWS services may be integrated with this pattern where required, but they are not mandatory components of the core Amazon Neptune solution.
 
-===================================
 
 
 ## Use Cases
