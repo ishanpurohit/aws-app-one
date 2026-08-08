@@ -96,14 +96,10 @@ The solution supports both operational graph workloads and analytical graph proc
 ---
 
 ## Architecture Diagram 
-This solution is centered on Amazon Neptune Database and Amazon Neptune Analytics as the primary graph services.
-
-The architecture includes:
+This solution is centered on Amazon Neptune Database and Amazon Neptune Analytics as the primary graph services. The architecture includes:
 
 - **Application / Compute Layer** - Represents the workload interacting with Amazon Neptune Database.
-
 - **Amazon Neptune Database** - Acts as the operational graph datastore and Supports transactional graph reads, writes, updates, and application queries.
-
 - **Amazon Neptune Analytics** - Provides a managed graph analytics engine, Imports graph data from Amazon Neptune Database for analytical processing, Enables graph analytics workloads to operate independently from the operational database.
 
 - **AWS Identity and Access Management (IAM)**
