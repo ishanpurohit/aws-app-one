@@ -102,14 +102,9 @@ The architecture includes:
 
 - **Application / Compute Layer** - Represents the workload interacting with Amazon Neptune Database.
 
-- **Amazon Neptune Database**
-  - Acts as the operational graph datastore.
-  - Supports transactional graph reads, writes, updates, and application queries.
+- **Amazon Neptune Database** - Acts as the operational graph datastore and Supports transactional graph reads, writes, updates, and application queries.
 
-- **Amazon Neptune Analytics**
-  - Provides a managed graph analytics engine.
-  - Imports graph data from Amazon Neptune Database for analytical processing.
-  - Enables graph analytics workloads to operate independently from the operational database.
+- **Amazon Neptune Analytics** - Provides a managed graph analytics engine, Imports graph data from Amazon Neptune Database for analytical processing, Enables graph analytics workloads to operate independently from the operational database.
 
 - **AWS Identity and Access Management (IAM)**
   - Provides authentication and least-privilege authorization between applications and Neptune services.
