@@ -1,3 +1,15 @@
+what setting needs to be enabled in azure bob storage when itry to migrate the data from azure blob to aws s3 using agentless method using aws data sync?
+
+
+For the agentless (Enhanced mode) path specifically, the setting that matters most is on the storage account's network configuration, since there's no agent sitting inside a private network to get you around it.
+
+The setting: Public network access must be enabled on the storage account
+
+Path: Azure Portal → your storage account → Security + networking → Networking → Firewalls and virtual networks tab → Public network access → set to Enabled from all networks.
+
+Why this is required: since agentless mode connects to Azure Blob's public HTTPS endpoint directly from the DataSync managed service (as we confirmed earlier — no agent means no private/VPC path), if your storage account's network setting is Disabled or restricted to Enabled from selected virtual networks and IP addresses, DataSync's calls will be blocked. AWS doesn't publish a fixed, allow-listable IP range for its Enhanced-mode DataSync backend the way it does for some other services, so in practice you can't scope the firewall down to specific AWS IPs — the storage account needs to accept public traffic generally, and access control instead relies on the SAS token.
+
+
 # APP-XX: AWS DataSync Cross-Cloud Data Transfer Solution Pattern
 
 ## Change History
